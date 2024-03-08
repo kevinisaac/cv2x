@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type='text/css'>
+        body {
+            background-color: #f2f4f6 !important;
+        }
+
+        .old-email-id-intimation-email {
+            width: 40%;
+            height: max-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 50px 0px 50px 50px;
+
+            border-radius: 10px;
+
+            background-color: white;
+        }
+
+        .old-email-id-intimation-email p {
+            font-family: inter;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class='old-email-id-intimation-email'>
+        <p>
+            Hello {{data.user_details.name}},
+        </p>
+
+        <p>
+            You recently requested to change your email ID to {{data.new_email}} on your Sunassist account.
+        </p>
+
+        <p>
+            If you didn't request for an email change, please contact Admin.
+        </p>
+
+        <br>
+
+        <p style="line-height: 0;">Regards,</p>
+        <p>The Sunassist Team.</p>
+    </div>
+</body>
+
+</html>

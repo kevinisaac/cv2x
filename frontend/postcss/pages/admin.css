@@ -1,0 +1,116 @@
+#admin-view {
+  .page-content {
+    .right-page-content {
+      .basic-details-primary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: var(--details-form-row-gap) var(--details-form-column-gap);
+        /* gap: 40px 20px; */
+      }
+
+      .mail-accounts {
+        .mail-accounts-table {
+        }
+
+        .mail-account-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+
+          .row {
+            display: flex;
+            gap: 30px;
+
+            .mail-account-name {
+              width: 100%;
+            }
+            .is-mail-account-inbox-created {
+              width: 100%;
+            }
+            .mail-account-warmup-service {
+              width: 100%;
+            }
+            .mail-account-warmup-start-date {
+              width: 100%;
+            }
+            .mail-account-service-provider {
+              width: 100%;
+            }
+            .mail-account-api-key {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .warmup-services {
+        .warmup-service-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+        }
+      }
+
+      .company-types {
+        .company-type-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+        }
+      }
+
+      .designations {
+        .designation-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+        }
+      }
+
+      .domain-score-services {
+        .domain-score-service-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+        }
+      }
+
+      .email-service-providers {
+        .email-service-provider-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+        }
+      }
+
+      .exhibit-apps {
+        .exhibit-app-status {
+          text-transform: capitalize;
+        }
+
+        .exhibit-app-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+        }
+      }
+
+      .industries {
+        .industry-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+        }
+      }
+
+      .specializations {
+        .specialization-form {
+          width: 40vw;
+          margin-right: 40px;
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
+

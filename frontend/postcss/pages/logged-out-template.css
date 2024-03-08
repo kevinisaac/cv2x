@@ -1,0 +1,123 @@
+#logged-out-template-view {
+  display: grid;
+  grid-template-rows: 1fr max-content 3fr;
+  grid-template-columns: 1fr minmax(200px, 500px) 1fr;
+  grid-template-areas:
+    '.    .           .'
+    '.    formbox     .'
+    '.    .           .'
+  ;
+
+  background-color: var(--body-color);
+
+  .form-box {
+    grid-area: formbox;
+
+    border: 1px solid #ced3d9;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .form-box-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 75px;
+
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #fff;
+      background-color: var(--form-header-color);
+    }
+
+    .form-box-body {
+      display: grid;
+      grid-template-columns: 1fr minmax(120px, 300px) 1fr;
+      grid-template-areas:
+        '.      form      .'
+      ;
+
+      margin-top: 55px;
+      margin-bottom: 35px;
+
+      form {
+        grid-area: form;
+      }
+    }
+
+    .form-box-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      text-align: center;
+
+      a {
+        color: var(--link-color);
+      }
+    }
+  }
+
+
+  /* Form specific */
+  .login-form-box {
+    .form-box-body {
+      form.login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .form-box-footer {
+      margin-bottom: 30px;
+    }
+  }
+
+  .register-form-box {
+    .form-box-body {
+      form.register-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .form-box-footer {
+      margin-bottom: 30px;
+    }
+  }
+
+  .forgot-password-form-box {
+    .form-box-body {
+      form.forgot-password-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .form-box-footer {
+      margin-bottom: 30px;
+    }
+  }
+
+  .reset-password-form-box {
+    .form-box-body {
+      form.reset-password-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .form-box-footer {
+      margin-bottom: 30px;
+    }
+  }
+}
+

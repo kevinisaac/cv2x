@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type='text/css'>
+        body {
+            background-color: #f2f4f6 !important;
+        }
+
+        .activate-reminder-email {
+            width: 40%;
+            height: max-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 50px 0px 50px 50px;
+
+            border-radius: 10px;
+
+            background-color: white;
+        }
+
+        .activate-reminder-email p {
+            font-family: inter;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class='activate-reminder-email'>
+        <p>
+            Hello {{data.user_details.name}},
+        </p>
+
+        <p>
+            This is a reminder for you to accept your invitation to join the Sunassist team.
+        </p>
+
+        <p>Please click on
+            <b>
+                <a href={{data.host_url}}set-password?email={{data.encoded_email}}&token={{data.password_set_token}} target="_blank"> this link </a>
+            </b>
+            to activate your account.
+        </p>
+
+        <p>
+            If you received this email by accident, just ignore this email.
+        </p>
+
+        <br>
+
+        <p style="line-height: 0;">Regards,</p>
+        <p>The Sunassist Team.</p>
+    </div>
+</body>
+
+</html>

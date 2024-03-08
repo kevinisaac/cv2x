@@ -1,0 +1,228 @@
+#roles-view {
+  .roles-section {
+    position: relative;
+    .add-roles-button {
+      position: absolute;
+      top: -70px;
+      right: 0;
+    }
+
+    .role-table {
+      .delete-role {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .user-assigned-warning {
+          position: relative;
+          .tooltip {
+            display: none;
+          }
+
+          &:hover {
+            .tooltip {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .role-modal .inner {
+      padding: 0 25px 25px 25px;
+      width: 375px;
+
+      .header {
+        padding-left: 0; /*To override default value*/
+        padding-right: 0;
+
+        .close-button {
+          right: 0;
+        }
+      }
+
+      .user-modal-content {
+        .action-button {
+          float: right;
+        }
+      }
+    }
+  }
+
+  .permissions-section-main {
+    .section-content {
+      margin-top: 0;
+    }
+  }
+
+  .permissions-section {
+    .permission-header-row {
+      position: sticky;
+      top: calc(var(--header-height) + var(--title-row-height));
+      z-index: 1;
+      display: flex;
+
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      color: var(--light-text);
+      background: #fff;
+      .permission-column-title {
+        flex: 1 0 0;
+
+        max-width: 200px;
+      }
+      .roles-header {
+        display: flex;
+        flex-grow: 1;
+
+        .role-header-name {
+          flex: 1 0 0;
+          display: flex;
+          justify-content: center;
+
+          max-width: 200px;
+        }
+      }
+    }
+
+    .permission-row {
+      display: flex;
+      /* justify-content: space-between; */
+
+      padding: 30px 0 ;
+
+      .permission-name-wrapper {
+        flex: 1 0 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        max-width: 200px;
+        .permission-name {
+          color: var(--dark-text);
+        }
+
+        .dependent-permissions-warning {
+          position: relative;
+
+          .tooltip {
+            display: none;
+          }
+
+          &:hover {
+            .tooltip {
+              display: block;
+
+              .permission-name-tooltip {
+                font-style: italic;
+              }
+            }
+          }
+        }
+      }
+
+      .permission-cell {
+        flex: 1 0 0;
+        display: flex;
+        justify-content: center;
+
+        max-width: 200px;
+      }
+    }
+
+    /* display: grid; */
+    /* grid-template-columns: max-content minmax(50px, 1fr) repeat(auto-fit, minmax(100px, 1fr)); */
+
+    .box-check-green-icon {
+      height: 23px;
+      width: 23px;
+      cursor: pointer;
+
+      background-image: url(/static/images/icons/box-check-green.svg);
+    }
+
+    .box-grey-icon {
+      height: 23px;
+      width: 23px;
+
+      background: #f3f3f3;
+      border: 1px solid #eeeeee;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .box-grey-icon:hover{
+      box-shadow: 0px 0px 5px rgb(22 28 42 / 5%);
+    }
+
+    .permission-modal .inner {
+      max-width: 674px;
+
+      .header {
+        padding: 20px 80px 20px 80px;
+      }
+
+      .permission-modal-content {
+        padding: 0 80px;
+
+        color: var(--light-text);
+        .line-1 {
+
+        }
+
+        .dependent-permission-list {
+          margin-top: 25px;
+
+          & > * + * {
+            margin-top: 15px;
+          }
+        }
+
+        .confirmation-line {
+          margin-top: 25px;
+        }
+
+        .permission-action {
+          display: flex;
+          justify-content: space-between;
+
+          margin-top: 40px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+
+  /* main.bundle.css | http://localhost:8080/static/main.bundle.css */
+  table.table thead.table-header tr.table-header-row th.table-header-data {
+    border-bottom: none;
+    /* border-bottom: 1px solid #f6f7f9; */
+    /* border-bottom: 1px solid var(--table-border-color); */
+  }
+
+  table.table thead.table-header tr.table-header-row {
+    box-shadow: none;
+    /* -webkit-box-shadow: 0 9px 18px -9px #efefef; */
+    /* box-shadow: 0 9px 18px -9px #efefef; */
+  }
+
+  table.table {
+    border: none;
+    box-shadow: none;
+    /* border: 1px solid #f6f7f9; */
+    /* -webkit-box-shadow: 0 15px 20px rgba(44,64,110,.03); */
+    /* box-shadow: 0 15px 20px rgba(44,64,110,.03); */
+  }
+
+
+  /* main.bundle.css | http://localhost:8080/static/main.bundle.css */
+  .table-empty {
+    border: none;
+    box-shadow: none;
+    /* border: 1px solid #f6f7f9; */
+    /* -webkit-box-shadow: 0 15px 20px rgba(44,64,110,.03); */
+    /* box-shadow: 0 15px 20px rgba(44,64,110,.03); */
+  }
+}

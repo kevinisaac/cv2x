@@ -1,0 +1,198 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.8-jessie-node-browsers-legacy
+
+    working_directory: ~
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: /home/circleci
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install --upgrade pip
+            pip install -r requirements.txt
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - venv
+
+  build-frontend-dev:
+    docker:
+      - image: cimg/node:18.8.0
+    steps:
+      - checkout
+      - run:
+          name: Run frontend build
+          command: |
+            npm install --force
+            npm run build-dev
+            mkdir /tmp/frontend-build
+            cp static/bundle.js /tmp/frontend-build
+            cp static/main.bundle.css /tmp/frontend-build
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - frontend-build
+
+  build-frontend-live:
+    docker:
+      - image: cimg/node:18.8.0
+    steps:
+      - checkout
+      - run:
+          name: Run frontend build
+          command: |
+            npm install --force
+            npm run build-live
+            mkdir /tmp/frontend-build
+            cp static/bundle.js /tmp/frontend-build
+            cp static/main.bundle.css /tmp/frontend-build
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - frontend-build
+
+  test-frontend:  # Incomplete
+    docker:
+      - image: cypress/base:18.8.0
+    steps:
+      - checkout
+      - run:
+          name: Run Cypress tests
+          command: |
+            npm install --force
+            cp static/bundle.js /tmp/frontend-build
+            cp static/main.bundle.css /tmp/frontend-build
+
+  test:
+    docker:
+      - image: circleci/python:3.6.8-jessie-node-browsers-legacy
+      - image: circleci/postgres:10.4-alpine-ram
+        environment:
+            TEST_DATABASE_URL: postgresql://root@localhost/circle_test
+
+    working_directory: /home/circleci/project
+
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /home/circleci/project
+      - run: |
+          . venv/bin/activate
+          pytest
+
+  deploy-to-dev:
+    machine:
+      enabled: true
+    working_directory: /home/circleci/project
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: Deploy to dev
+          command: |
+            git push ssh://circleci@outreach.devpreview.in:/var/git/outreach-dev.git main
+
+            # Move the generated build files to the server
+            scp /tmp/frontend-build/bundle.js circleci@outreach.devpreview.in:/var/www/outreach-dev/static/bundle.js
+            scp /tmp/frontend-build/main.bundle.css circleci@outreach.devpreview.in:/var/www/outreach-dev/static/main.bundle.css
+
+  deploy-to-live:
+    machine:
+      enabled: true
+    working_directory: /home/circleci/project
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: Deploy to live
+          command: |
+            git push ssh://circleci@outreach.zephony.com:/var/git/outreach-live.git live
+
+            # Move the generated build files to the server
+            scp /tmp/frontend-build/bundle.js circleci@outreach.zephony.com:/var/www/outreach-live/static/bundle.js
+            scp /tmp/frontend-build/main.bundle.css circleci@outreach.zephony.com:/var/www/outreach-live/static/main.bundle.css
+
+
+workflows:
+  version: 2
+  build-and-deploy-to-dev:
+    jobs:
+      - build-frontend-dev:
+          filters:
+            branches:
+              only: main
+      - deploy-to-dev:
+          requires:
+            - build-frontend-dev
+          filters:
+            branches:
+              only: main
+  build-and-deploy-to-live:
+    jobs:
+      - build-frontend-live:
+          filters:
+            branches:
+              only: live
+      - deploy-to-live:
+          requires:
+            - build-frontend-live
+          filters:
+            branches:
+              only: live
+
+
+# workflows:
+#   version: 2
+#   build-and-test:
+#     jobs:
+#       # - build
+#       - build-frontend-dev
+#       - build-frontend-demo
+#       # - test:
+#       #     requires:
+#       #       - build-frontend
+#       - deploy-to-dev:
+#           requires:
+#             # - build
+#             - build-frontend-dev
+#             # - test
+#           filters:
+#             branches:
+#               only: main
+#       - deploy-to-demo:
+#           requires:
+#             # - build
+#             - build-frontend-demo
+#           filters:
+#             branches:
+#               only: demo
+#       # - deploy-to-live:
+#       #     requires:
+#       #       # - build
+#       #       - build-frontend-live
+#       #     filters:
+#       #       branches:
+#       #         only: live

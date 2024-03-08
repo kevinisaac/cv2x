@@ -1,0 +1,101 @@
+/*
+ * This file contains all the postcss variables and animations that are
+ * used in the application.
+ * */
+
+/* PostCSS Varaibles */
+$mobile-breakpoint: 900px;
+
+:root {
+  --mobile-width: 1000px;
+
+  --sidebar-width: 230px;
+  --header-height: 100px;
+  --unsaved-data-banner-height: 25px;
+  --content-top-margin: 50px;
+  --content-top-height: 100px;
+  --content-top-row-height: 50px;
+  --content-bottom-margin: 50px;
+
+  --list-view-top-height: 100px;
+  --list-view-bottom-margin: 50px;
+
+  --title-row-height: 70px;
+
+  /* Form related */
+  --details-form-row-gap: 20px;
+  --details-form-column-gap: 20px;
+
+  /* Booking calendar related */
+  --session-row-height: 50px;
+  --time-row-height: 50px;
+  --unallocated-row-height: 100px;
+
+  /* Color related */
+  --red: #ed6c6c;
+  --green: #20a46c;
+  --grey: #999999;
+  --dark-grey: #283e6a;
+  --white: #ffffff;
+  --yellow: #ffe18e;
+  --dark-yellow: #f2c024;
+
+  --body-color: #f2f4f6;
+
+  --link-color: #0170ff;
+  --email-color: #39b5ff;
+  --border-color: #ededed;
+  --input-border-color: #cccccc;
+  --menu-active-color: #2c406e;
+  --menu-color: #a1b1cf;
+
+  --form-header-color: #32383f;
+  --title-color: #2c406e;
+  --section-background: #fff;
+
+  /* Button related */
+  --primary-button-background: #ffe18e;
+  --primary-button-color: #2c406e;
+  --danger-button-color: #fff;
+  --danger-button-background: #ed6c6c;
+
+  /* Input */
+  --label-color: #8f9eb8;
+  --input-border-color: #e9ecf1;
+  --input-value-color: #2c406e;
+  --input-placeholder-color: #cccccc;
+  --checkbox-checkmark-width: 60px;
+
+  /* Table */
+  --table-light-text: #8f9eb8;
+  --table-dark-text: #2c406e;
+  --table-border-color: #f6f7f9;
+  --table-padding: 20px;
+
+
+  /* Variables for new design */
+  --light-text: #8f9eb8;
+  --dark-text: #2c406e;
+  --blue-link-color: #39b5ff;
+  --main-white-color: #f5f5f7;
+  --box-background-color: #1d1d1d;
+}
+
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0.3;
+  }
+  80% {
+    transform: translateX(-5px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+$mobile-breakpoint: 900px;

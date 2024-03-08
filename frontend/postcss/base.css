@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100;
+  src: url(/static/fonts/Inter-Thin.otf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 200;
+  src: url(/static/fonts/Inter-ExtraLight.ttf);
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 200;
+  font-style: italic;
+  src: url(/static/fonts/Inter-ExtraLightItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 300;
+  src: url(/static/fonts/Inter-Light.ttf);
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 300;
+  font-style: italic;
+  src: url(/static/fonts/Inter-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  src: url(/static/fonts/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  font-style: italic;
+  src: url(/static/fonts/Inter-Italic.otf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 500;
+  src: url(/static/fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  src: url(/static/fonts/Inter-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-style: italic;
+  src: url(/static/fonts/Inter-SemiBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: bold;
+  src: url(/static/fonts/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: bold;
+  font-style: italic;
+  src: url(/static/fonts/Inter-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 800;
+  src: url(/static/fonts/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 900;
+  src: url(/static/fonts/Inter-Black.ttf);
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 900;
+  font-style: italic;
+  src: url(/static/fonts/Inter-BlackItalic.ttf);
+}
+
+/* @font-face { */
+/*   font-family: 'Graphik'; */
+/*   font-weight: 950; */
+/*   src: url(/static/fonts/GraphikExtraBlack.otf); */
+/* } */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Hide arrows from input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  /* https://css-tricks.com/books/volume-i/scale-typography-screen-size/ - link is broken */
+  /* https://css-tricks.com/snippets/css/fluid-typography/ */
+  font-size: calc(10px + (29.5 - 24.5) * ((100vw - 300px) / (2100 - 300)));
+  /* font-size: 4em; */
+  font-family: 'Inter';
+  /* background-color: peru; */
+
+  line-height: 1.35;
+  /* line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300))); */
+  letter-spacing: -.00278rem;
+
+  /* From UU */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input[type=button], input[type=submit] {
+  /* Apparently, font-family has to be inherited manually like this */
+  font-family: inherit;
+
+  color: inherit;
+  background-color: inherit;
+  outline: 0;
+  cursor: pointer;
+  /* letter-spacing: 0.05em; */
+  border: 0;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=number], textarea {
+  /* Apparently, these properties have to be inherited manually like this */
+  font-family: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+

@@ -1,0 +1,43 @@
+#components-view {
+  grid-area: content;
+
+  padding: 30px;
+  /* margin-left: 100px; */
+
+  background-color: #fafafa;
+}
+
+.box {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 25px 0 #00000006;
+}
+
+.dp-wrapper {
+  grid-area: dp;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+  padding: 18px 10px 0px 10px;
+
+  background-color: #f8f8f8;
+  border-radius: 5px;
+
+  .label {
+    color: var(--grey);
+  }
+  .temp-label {
+    font-weight: 600;
+  }
+  .file-field .file-field-inner {
+    border: none;
+    background-color: inherit;
+
+    .icon {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+    ports:
+      - 8081:8080
+    working_dir: /app
+    volumes:
+      - ./frontend/:/app/frontend
+      - ./package.json/:/app/package.json
+      - ./static/:/app/static
+      - ./data:/app/data
+      # - ./:/
+    networks:
+      cv2x:
+        aliases:
+          - frontend
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    ports:
+      - 5002:5000
+    working_dir: /app
+    volumes:
+      - ./backend:/app/backend
+      - ./requirements.txt:/app/requirements.txt
+      - ./data:/app/data
+      - ./templates:/app/templates
+
+      # Don't remove this line - only keep it commented
+      # - /Users/kevinisaac/Code/zephony/zephony-pypi/zephony/:/usr/local/lib/python3.11/site-packages/zephony
+      # - /Users/gokulnathck/Desktop/Zephony/projects/zephony-pypi/zephony/:/usr/local/lib/python3.11/site-packages/zephony/
+      # - /Users/paulpadamadan/Repos/zephony-pypi/zephony/:/usr/local/lib/python3.11/site-packages/zephony/
+    networks:
+      cv2x:
+        aliases:
+          - backend
+    environment:
+      # APP_ENV: 'dev'
+      POSTGRES_URL: 'postgresql://admin:password@postgres/admin'
+      REDIS_HOST: 'redis'
+
+  mqtt:
+    ports:
+      - 1883:1883
+    image: eclipse-mosquitto
+    networks:
+      cv2x:
+        aliases:
+          - mqtt
+
+  postgres:
+    image: postgres:15-alpine
+    networks:
+      cv2x:
+        aliases:
+          - postgres
+    ports:
+      - 5679:5432
+    volumes:
+      - cv2x-db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+
+networks:
+  cv2x:
+
+volumes:
+  cv2x-db:

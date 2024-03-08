@@ -1,0 +1,75 @@
+#users-view {
+  /* display: grid; */
+  /* grid-template-rows: 100px max-content; */
+  /* grid-template-areas: */
+  /*   '.' */
+  /*   'content' */
+  /* ; */
+  /* row-gap: 20px; */
+
+  .page-content {
+    grid-area: content;
+
+    .users-table {
+      td {
+        font-size: 16px;
+      }
+
+      .user {
+        .user-name {
+          margin-bottom: 5px;
+
+          font-weight: 500;
+          line-height: 19px;
+        }
+        .user-email {
+          font-weight: 500;
+          font-size: 0.875em;
+          line-height: 17px;
+          color: var(--table-light-text);
+        }
+      }
+
+      .user-status {
+        text-transform: capitalize;
+      }
+      .user-actions {
+        display: flex;
+        gap: 20px;
+      }
+
+      .role {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+
+        margin-right: 13px;
+      }
+    }
+  }
+
+  .user-modal .inner {
+    padding: 0 25px 25px 25px;
+    width: 375px;
+
+    .header {
+      padding-left: 0; /*To override default value*/
+      padding-right: 0;
+
+      .close-button {
+        right: 0;
+      }
+    }
+
+    .user-modal-content {
+      .action-button {
+        display: flex;
+        justify-content: space-between;
+
+        .user-edit-button {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

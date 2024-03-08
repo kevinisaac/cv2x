@@ -1,0 +1,30 @@
+#companies-view {
+  /* display: grid; */
+  /* grid-template-rows: 100px max-content; */
+  /* grid-template-areas: */
+  /*   '.' */
+  /*   'content' */
+  /* ; */
+  /* row-gap: 20px; */
+
+  .page-content {
+    grid-area: content;
+
+    .companies-table {
+      td {
+        /* font-size: 16px; */
+      }
+
+      .company-website {
+        margin-top: 5px;
+
+        color: var(--table-light-text);
+        text-decoration: underline;
+      }
+
+      .data-not-available {
+        margin-top: 5px;
+      }
+    }
+  }
+}

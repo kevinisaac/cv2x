@@ -1,0 +1,12 @@
+#domain-details-view {
+  .page-content {
+    .right-page-content {
+      .basic-details-primary, .setup-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: var(--details-form-row-gap) var(--details-form-column-gap);
+      }
+    }
+  }
+}
+

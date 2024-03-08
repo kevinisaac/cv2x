@@ -1,0 +1,161 @@
+#gmail-view {
+    color: var(--menu-active-color);
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        grid-template-areas:
+        ". right-content";
+        column-gap: 30px;
+
+        .left-content {
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+
+            .email-list-wrapper {
+                .email-list-toggle {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 0 25px;
+                    color: #a1b1cf;
+                    cursor: pointer;
+
+                    .active-tab {
+                        color: var(--menu-active-color);
+                        font-weight: 600;
+                        text-decoration: underline;
+                    }
+
+                    .dot-seperator {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 99px;
+                        background-color: #d0e1f4;
+                    }
+                }
+
+                .emails {
+                    padding: 20px;
+                    border: 1px solid #d9d9d9;
+                    border-radius: 10px;
+                    font-size: 1em;
+                    font-weight: 500;
+
+                    .sender-recipient-info-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        margin-bottom: 20px;
+                    }
+
+                    .subject-info {
+                        line-height: 1.7;
+                        margin-bottom: 20px;
+                    }
+
+                    .campaign-and-email-schedule-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        .email-date-time-info {
+                            color: #0daf61;
+                            font-size: .75em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-content {
+            .email-preview {
+                padding: 30px;
+                background-color: #ffffff;
+                border-radius: 10px;
+
+                hr {
+                    margin-top: 20px;
+                    border: 1px solid #f3f3f3;
+                }
+
+                .preview-title {
+                    margin-bottom: 20px;
+                    font-size: 1.35em;
+                    font-weight: 700;
+                }
+
+                .email-basic-details {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .sender-recipient-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 15px;
+                        font-size: 1em;
+                        font-weight: 500;
+                    }
+
+                    .campaign-email-info {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                        gap: 5px;
+                        font-size: 1em;
+                        font-weight: 500;
+
+                        .date {
+                            font-size: .75em;
+                        }
+
+                        .email-date-time {
+                            font-size: .75em;
+                            color: #0daf61;
+                        }
+
+                        .email-date-time-scheduled {
+                            font-size: .75em;
+                            color: #fc8547;
+                        }
+                    }
+                }
+
+                .email-subject-details {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 20px;
+
+                    .email-subject {
+                        font-size: 1em;
+                        font-weight: 500;
+                    }
+                }
+
+                .email-content-details {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 20px;
+
+                        .email-content {
+                            font-size: 1em;
+                            font-weight: 500;
+                            line-height: 2;
+                        }
+                }
+
+                .follow-up-details {
+                    .follow-up-title {
+                        margin: 20px 0;
+                        font-size: .875em;
+                        color: #abb3c5;
+                    }
+                }
+            }
+        }
+    }
+}

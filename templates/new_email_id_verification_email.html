@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type='text/css'>
+        body {
+            background-color: #f2f4f6 !important;
+        }
+
+        .new-email-id-verification-email {
+            width: 40%;
+            height: max-content;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            padding: 50px 0px 50px 50px;
+
+            border-radius: 10px;
+
+            background-color: white;
+        }
+
+        .new-email-id-verification-email p {
+            font-family: inter;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='new-email-id-verification-email'>
+        <p>
+            Hello {{data.user_details.name}},
+        </p>
+        <p>
+          Your email ID has been changed from {{data.user_details.email}} to {{data.new_email}}.
+        </p>
+
+        <p>Please click on
+            <b>
+                <a href={{data.host_url}}verify-email?new_email={{data.encoded_new_email}}&token={{data.new_email_verification_token}} target="_blank"> this link </a>
+            </b>
+            to activate your new email.
+        </p>
+
+        <p>
+            If you didn't request for an email change, please contact Admin.
+        </p>
+
+        <br>
+
+        <p style="line-height: 0;">Regards,</p>
+        <p>The Sunassist Team.</p>
+    </div>
+</body>
+
+</html>

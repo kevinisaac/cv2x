@@ -1,0 +1,770 @@
+{
+    "titles": [
+        {
+            "token" : "mr",
+            "label": "Mr"
+        },
+        {
+            "token": "mrs",
+            "label": "Mrs"
+        },
+        {
+            "token": "ms",
+            "label": "Ms"
+        },
+        {
+            "token": "dr",
+            "label": "Dr"
+        },
+        {
+            "token": "miss",
+            "label": "Miss"
+        }
+    ],
+    "genders" : [
+        {
+            "token": "male",
+            "label": "Male"
+        },
+        {
+            "token": "female",
+            "label": "Female"
+        },
+        {
+            "token": "other",
+            "label": "Other"
+        }
+    ],
+    "religions": [
+        {
+            "token": "christianity",
+            "label": "Christianity"
+        },
+        {
+            "token": "islam",
+            "label": "Islam"
+        },
+        {
+            "token": "buddhism",
+            "label": "Buddhism"
+        },
+        {
+            "token": "hinduism",
+            "label": "Hinduism"
+        },
+        {
+            "token": "atheism",
+            "label": "Atheism"
+        },
+        {
+            "token": "other",
+            "label": "Other"
+        }
+    ],
+    "user_statuses": [
+        {
+            "token": "invited",
+            "label": "Invited"
+        },
+        {
+            "token": "active",
+            "label": "Active"
+        },
+        {
+            "token": "deactivated",
+            "label": "Deactivated"
+        }
+    ],
+    "vehicle_statuses": [
+        {
+            "token": "active",
+            "label": "Active"
+        },
+        {
+            "token": "archived",
+            "label": "Archived"
+        }
+    ],
+    "volunteer_statuses": [
+        {
+            "token": "active",
+            "label": "Active"
+        },
+        {
+            "token": "archived",
+            "label": "Archived"
+        }
+    ],
+    "lead_statuses": [
+        {
+            "token": "active",
+            "label": "Active"
+        },
+        {
+            "token": "archived",
+            "label": "Archived"
+        }
+    ],
+    "company_statuses": [
+        {
+            "token": "active",
+            "label": "Active"
+        },
+        {
+            "token": "archived",
+            "label": "Archived"
+        }
+    ],
+    "email_response_statuses":[
+        {
+            "token": "no_response",
+            "label": "No Response",
+            "description": "No response from the lead"
+        },
+        {
+            "token": "in_vacation",
+            "label": "In Vacation",
+            "description": "Lead is on vacation"
+        },
+        {
+            "token": "not_interested",
+            "label": "Not Intereseted",
+            "description": "Lead is not intereseted in going forward"
+        },
+        {
+            "token": "intereseted",
+            "label": "Intereseted",
+            "description": "Lead is intereseted"
+        }
+    ],
+    "steps":[
+        {
+            "token": "not_interested",
+            "label": "Not Interested"
+        },
+        {
+            "token": "in_discussion",
+            "label": "In Discussion"
+        },
+        {
+            "token": "meeting_booked",
+            "label": "Meeting Booked"
+        },
+        {
+            "token": "not_interested_after_meeting",
+            "label": "Not Interested after Meeting"
+        },
+        {
+            "token": "converted",
+            "label": "Converted"
+        },
+        {
+            "token": "not_emailed ",
+            "label": "Not Emailed"
+        },
+        {
+            "token": "to_be_emailed",
+            "label": "To be Emailed"
+        },
+        {
+            "token": "contacted",
+            "label": "Contacted"
+        },
+        {
+            "token": "got_response",
+            "label": "Got response"
+        }
+    ],
+    "referrals": [
+        {
+            "token": "self",
+            "label": "Self"
+        },
+        {
+            "token": "accomodation_provider",
+            "label": "Accomodation provider"
+        },
+        {
+            "token": "other_medical_or_health_service",
+            "label": "Other medical/health service"
+        },
+        {
+            "token": "family_significant_other_friend",
+            "label": "Family, significant other, friend"
+        },
+        {
+            "token": "other_community_based_service",
+            "label": "Other community-based service"
+        },
+        {
+            "token": "psychiatric_or_mental_health_service_or_facility",
+            "label": "Psychiatric/mental health service or facility"
+        },
+        {
+            "token": "aboriginal_health_service",
+            "label": "Aboriginal health service"
+        },
+        {
+            "token": "other",
+            "label": "Other"
+        },
+        {
+            "token": "community_nursing_or_health_service",
+            "label": "Community nursing or health service"
+        },
+        {
+            "token": "palliative_care_facility_or_hospice",
+            "label": "Palliative care facility/hospice"
+        },
+        {
+            "token" : "gp_or_medical_practitioner",
+            "label": "GP/medical practitioner"
+        },
+        {
+            "token": "residential_aged_care_facility",
+            "label": "Residential aged care facility"
+        },
+        {
+            "token": "extended_care_or_rehabilitation_facility",
+            "label": "Extended care/rehabilitation facility"
+        },
+        {
+            "token" : "aged_care_assessment_team",
+            "label": "Aged Care Assessment Team"
+        },
+        {
+            "token": "hospital",
+            "label": "Hospital"
+        }
+    ],
+    "marital_statuses": [
+        {
+            "token": "defacto",
+            "label": "Defacto"
+        },
+        {
+            "token": "widowed",
+            "label": "Widowed"
+        },
+        {
+            "token": "married",
+            "label": "Married"
+        },
+        {
+            "token": "single",
+            "label": "Single"
+        }
+    ],
+    "indigenous_statuses": [
+        {
+            "token": "aboriginal_and_torres_strait_islander",
+            "label": "Aboriginal and Torres Strait Islander"
+        },
+        {
+            "token": "non_indigenous",
+            "label": "Non indigenous"
+        },
+        {
+            "token": "aboriginal",
+            "label": "Aboriginal"
+        }
+    ],
+    "living_arrangements": [
+        {
+            "token": "lives_in_supported_accomodation",
+            "label": "Lives in supported accomodation"
+        },
+        {
+            "token": "lives_alone",
+            "label": "Lives alone"
+        },
+        {
+            "token": "lives_with_family",
+            "label": "Lives with Family"
+        }
+    ],
+    "dvas": [
+        {
+            "token": "gold",
+            "label": "Gold"
+        },
+        {
+            "token": "white",
+            "label": "White"
+        },
+        {
+            "token": "other",
+            "label": "Other"
+        },
+        {
+            "token": "no_dva_card",
+            "label": "No DVA Card"
+        }
+    ],
+    "visions": [
+        {
+            "token": "very_good",
+            "label": "Very Good"
+        },
+        {
+            "token": "good",
+            "label": "Good"
+        },
+        {
+            "token": "poor",
+            "label": "Poor"
+        },
+        {
+            "token": "blind",
+            "label": "Blind"
+        }
+    ],
+    "hearings": [
+        {
+            "token": "very_good",
+            "label": "Very Good"
+        },
+        {
+            "token": "good",
+            "label": "Good"
+        },
+        {
+            "token": "poor",
+            "label": "Poor"
+        },
+        {
+            "token": "deaf",
+            "label": "Deaf"
+        }
+    ],
+    "dietary_requirements": [
+        {
+            "token": "low_salt",
+            "label": "Low Salt"
+        },
+        {
+            "token": "low_sugar",
+            "label": "Low sugar"
+        },
+        {
+            "token": "stoma_no_peas_corn",
+            "label": "Stoma No Peas Corn"
+        }
+    ],
+    "delivery_areas" : [
+        {
+            "token": "red_cliffs",
+            "label": "Red Cliffs"
+        },
+        {
+            "token": "merbein",
+            "label": "Merbein"
+        },
+        {
+            "token": "mildura",
+            "label": "Mildura"
+        },
+        {
+            "token": "irymple",
+            "label": "Irymple"
+        },
+        {
+            "token": "other",
+            "label": "Other"
+        }
+    ],
+    "am_or_pm": [
+        {
+            "token": "am",
+            "label": "AM"
+        },
+        {
+            "token": "pm",
+            "label": "PM"
+        }
+    ],
+    "weekdays": [
+        {
+            "token": 0,
+            "label": "Monday"
+        },
+        {
+            "token": 1,
+            "label": "Tuesday"
+        },
+        {
+            "token": 2,
+            "label": "Wednesday"
+        },
+        {
+            "token": 3,
+            "label": "Thursday"
+        },
+        {
+            "token": 4,
+            "label": "Friday"
+        },
+        {
+            "token": 5,
+            "label": "Saturday"
+        },
+        {
+            "token": 6,
+            "label": "Sunday"
+        }
+    ],
+    "client_routes": [
+        {
+            "token": 1,
+            "label": "1"
+        },
+        {
+            "token": 2,
+            "label": "2"
+        },
+        {
+            "token": 3,
+            "label": "3"
+        },
+        {
+            "token": 4,
+            "label": "4"
+        },
+        {
+            "token": 5,
+            "label": "5"
+        },
+        {
+            "token": 6,
+            "label": "6"
+        },
+        {
+            "token": 7,
+            "label": "7"
+        }
+    ],
+    "yes_or_no": [
+        {
+            "token": "true",
+            "label": "Yes"
+        },
+        {
+            "token": "false",
+            "label": "No"
+        }
+    ],
+    "service_allocation": [
+        {
+            "token": 1,
+            "label": 1
+        },
+        {
+            "token": 2,
+            "label": 2
+        },
+        {
+            "token": 3,
+            "label": 3
+        },
+        {
+            "token": 4,
+            "label": 4
+        }
+    ],
+    "relationships": [
+        {
+            "token": "husband",
+            "label": "Husband"
+        },
+        {
+            "token": "wife",
+            "label": "Wife"
+        },
+        {
+            "token": "brother",
+            "label": "Brother"
+        },
+        {
+            "token": "sister",
+            "label": "Sister"
+        },
+        {
+            "token": "father",
+            "label": "Father"
+        },
+        {
+            "token": "mother",
+            "label": "Mother"
+        },
+        {
+            "token": "son",
+            "label": "Son"
+        },
+        {
+            "token": "daughter",
+            "label": "Daughter"
+        },
+        {
+            "token": "fiance",
+            "label": "Fiance"
+        },
+        {
+            "token": "partner",
+            "label": "Partner"
+        },
+        {
+            "token": "cousin",
+            "label": "Cousin"
+        },
+        {
+            "token": "friend",
+            "label": "Friend"
+        },
+        {
+            "token": "family_friend",
+            "label": "Family friend"
+        },
+        {
+            "token": "mother_in_law",
+            "label": "Mother-in-law"
+        },
+        {
+            "token": "father_in_law",
+            "label": "Father-in-law"
+        },
+        {
+            "token": "brother_in_law",
+            "label": "Brother-in-law"
+        },
+        {
+            "token": "sister_in_law",
+            "label": "Sister-in-law"
+        },
+        {
+            "token": "son_in_law",
+            "label": "Son-in-law"
+        },
+        {
+            "token": "daughter_in_law",
+            "label": "Daughter-in-law"
+        },
+        {
+            "token": "cousin",
+            "label": "Cousin"
+        },
+        {
+            "token": "housemate",
+            "label": "Housemate"
+        },
+        {
+            "token": "employer",
+            "label": "Employer"
+        },
+        {
+            "token": "ex_employer",
+            "label": "Ex-employer"
+        },
+        {
+            "token": "carer",
+            "label": "Carer"
+        },
+        {
+            "token": "grandfather",
+            "label": "Grandfather"
+        },
+        {
+            "token": "grandmother",
+            "label": "GrandMother"
+        },
+        {
+            "token": "grandson",
+            "label": "Grandson"
+        },
+        {
+            "token": "granddaughter",
+            "label": "Granddaughter"
+        },
+        {
+            "token": "neighbour",
+            "label": "Neighbour"
+        },
+        {
+            "token": "colleague",
+            "label": "Colleague"
+        },
+        {
+            "token": "nephew",
+            "label": "Nephew"
+        },
+        {
+            "token": "niece",
+            "label": "Niece"
+        },
+        {
+            "token": "case_manager",
+            "label": "Case manager"
+        },
+        {
+            "token": "care_facility",
+            "label": "Care facility"
+        },
+        {
+            "token": "support_worker",
+            "label": "Support worker"
+        },
+        {
+            "token": "aunt",
+            "label": "Aunt"
+        },
+        {
+            "token": "uncle",
+            "label": "Uncle"
+        },
+        {
+            "token": "ex_husband",
+            "label": "Ex-husband"
+        },
+        {
+            "token": "ex_wife",
+            "label": "Ex-wife"
+        },
+        {
+            "token": "residence",
+            "label": "Residence"
+        },
+        {
+            "token": "other",
+            "label": "Other"
+        }
+    ],
+    "donation_types":[
+        {
+            "token": "no_charge",
+            "label": "No Charge"
+        },
+        {
+            "token": "account",
+            "label": "Account"
+        },
+        {
+            "token": "donation",
+            "label": "Donation"
+        }
+    ],
+    "frequencies": [
+        {
+            "token": "DAILY",
+            "label": "Days"
+        },
+        {
+            "token": "WEEKLY",
+            "label": "Weeks"
+        },
+        {
+            "token": "MONTHLY",
+            "label": "Months"
+        },
+        {
+            "token": "YEARLY",
+            "label": "Years"
+        }
+    ],
+    "phone_number_labels": [
+        {
+            "token": "personal",
+            "label": "Personal"
+        },
+        {
+            "token": "home",
+            "label": "Home"
+        },
+        {
+            "token": "work",
+            "label": "Work"
+        },
+        {
+            "token": "mobile",
+            "label": "Mobile"
+        },
+        {
+            "token": "other",
+            "label": "Other"
+        }
+    ],
+    "client_alive_or_deceased": [
+        {
+            "token": "active",
+            "label": "Alive"
+        },
+        {
+            "token": "inactive",
+            "label": "Deceased"
+        }
+    ],
+    "weekdays_for_rrule" : [
+        {
+            "token": "MO",
+            "label" : "Monday"
+        },
+        {
+            "token": "TU",
+            "label" : "Tuesday"
+        },
+        {
+            "token": "WE",
+            "label" : "Wednesday"
+        },
+        {
+            "token": "TH",
+            "label" : "Thursday"
+        },
+        {
+            "token": "FR",
+            "label" : "Friday"
+        },
+        {
+            "token": "SA",
+            "label" : "Saturday"
+        },
+        {
+            "token": "SU",
+            "label" : "Sunday"
+        }
+    ],
+    "ser": [
+        {
+            "token": "medical",
+            "label": "Medical"
+        },
+        {
+            "token": "social",
+            "label": "Social"
+        },
+        {
+            "token": "shopping",
+            "label": "Shopping"
+        }
+    ],
+    "exhibit_response_status": [
+        {
+            "token": "no_response",
+            "label": "No Response"
+        },
+        {
+            "token": "in_vacation",
+            "label": "In Vacation"
+        },
+        {
+            "token": "not_interested",
+            "label": "Not Interested"
+        },
+        {
+            "token": "interested",
+            "label": "Interested"
+        },
+        {
+            "token": "may_be_later",
+            "label": "MayBe Later"
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+#settings-view {
+  .basic-details-primary {
+    display: grid;
+    grid-template-areas:
+      'pp   username    email   .'
+      'pp   name        phone   .'
+      'pp   .           .       .'
+    ;
+    grid-template-columns: 150px minmax(200px, 300px) minmax(200px, 300px) 1fr;
+    column-gap: 50px;
+    /* row-gap: 45px; */
+    row-gap: 20px;
+
+    .profile-photo {
+      grid-area: pp;
+    }
+    .user-name {
+      grid-area: username;
+    }
+    .email {
+      grid-area: email;
+    }
+    .name {
+      grid-area: name;
+    }
+    .phone-no {
+      grid-area: phone;
+    }
+  }
+
+  .security {
+    position: relative;
+    .row-1 {
+      display: flex;
+      gap: 30px;
+      /* align-items: center; */
+
+      .update-email-id {
+        max-width: 300px;
+      }
+
+      .send-invite-button {
+        height: max-content;
+        margin-top: 6px;
+      }
+    }
+    .row-2 {
+      display: flex;
+      gap: 30px;
+      /* align-items: center; */
+
+      margin-top: 40px;
+
+      .update-password {
+        max-width: 300px;
+      }
+
+      .save {
+        height: max-content;
+        margin-top: 6px;
+      }
+    }
+
+    .security-locked-screen {
+      position: absolute;
+      top:0;
+      left: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100%;
+      width: 100%;
+
+      background-color: var(--white);
+
+      .center-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .lock-icon, .lock-subtitle, .enter-password {
+          display: flex;
+          justify-content: center;
+        }
+
+        .lock-subtitle {
+          margin-top: 16px;
+
+          font-weight: 500;
+          font-size: 1.257em;
+          color: var(--dark-text);
+        }
+
+        .enter-password {
+          margin-top: 6px;
+
+          font-size: 0.942em;
+          color: var(--dark-text);
+        }
+
+        .current-password {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+
+          margin-top: 30px;
+
+          .unlock-button {
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .personalization {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 50px;
+    .custom-date-format, .custom-time-format {
+      flex-grow: 1;
+      max-width: 300px;
+    }
+  }
+}

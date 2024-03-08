@@ -1,0 +1,119 @@
+#home-page-view {
+  .hero-section {
+    display: grid;
+    grid-template-rows: 1fr max-content 50px;
+    grid-template-columns: minmax(20px, 1fr) minmax(320px, 950px) minmax(20px, 1fr);
+    grid-template-areas:
+      '.        .         .'
+      '.        content   .'
+      '.        .         .'
+    ;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('/static/images/3d-image.png');
+    background-size: cover;
+    background-position: center 15%;
+
+    .menu, .mobile-menu {
+      position: fixed;
+      top: 120px;
+      left: 50px;
+
+      .menu-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .menu-item {
+          color: #989898;
+          color: #ccc;
+          /* font-weight: 400; */
+          font-size: 1.3em;
+
+          &.active {
+            color: #bfbfbf;
+            font-weight: 700;
+            font-size: 2.2em;
+          }
+        }
+      }
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 41px;
+      left: 20px;
+      display: none;
+
+      @media screen and  (max-width: $mobile-breakpoint) {
+        display: unset;
+      }
+    }
+
+    @media screen and  (max-width: $mobile-breakpoint) {
+      .menu {
+        display: none;
+      }
+
+      .mobile-menu {
+
+      }
+    }
+
+
+    .main-content {
+      grid-area: content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      color: var(--main-white-color);
+      text-align: center;
+
+      .pre-heading {
+        /* Temporarily hidden */
+        display: none;
+        margin-bottom: 40px;
+
+        font-weight: 600;
+      }
+
+      .heading-wrapper {
+        /* To center align heading with variable padding */
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-areas:
+          '.        heading       .'
+        ;
+
+        margin-bottom: 40px;
+
+        .heading {
+          grid-area: heading;
+
+          line-height: 1.08em;
+          font-size: 3.8em;
+          font-weight: 800;
+        }
+      }
+
+      .sub-heading {
+        margin-bottom: 48px;
+
+        font-size: 1.80em;
+        font-weight: 500;
+      }
+
+      .timeline-cta {
+        a {
+          font-size: 1.7em;
+          font-weight: 500;
+          color: var(--blue-link-color);
+        }
+      }
+    }
+  }
+}
+

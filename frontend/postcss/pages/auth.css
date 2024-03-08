@@ -1,0 +1,164 @@
+.form-box {
+  display: grid;
+  grid-template-rows: 92px 140px 46px max-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-areas:
+    '.    .             .'
+    '.    logo          .'
+    '.    .             .'
+    '.    form    .'
+    '.    .             .'
+  ;
+
+  height: 100vh;
+
+  background-color: #f2f4f6;
+
+  .logo-header {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      /* width: 300px; */
+      height: 150px;
+    }
+  }
+
+  .form-box-body {
+    grid-area: form;
+
+    padding: 55px;
+
+    background: #ffffff;
+    border: 1px solid #f6f7f9;
+    box-shadow: 0px 0px 15px rgba(44, 64, 110, 0.08);
+    border-radius: 20px;
+
+    .form-main-heading {
+      margin-bottom: 35px;
+
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: #080a51;
+    }
+  }
+}
+
+.login-form-box {
+  .login-form-wrapper {
+    grid-area: form;
+    padding: 55px;
+
+    background: #ffffff;
+    border: 1px solid #f6f7f9;
+    box-shadow: 0px 0px 15px rgba(44, 64, 110, 0.08);
+    border-radius: 20px;
+
+    .login-form-main-heading {
+      margin-bottom: 35px;
+
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: #080a51;
+    }
+    .login-form-sub-heading {
+      margin-bottom: 35px;
+
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 30px;
+      color: #080a51;
+    }
+
+    .login-form {
+
+      .password {
+        margin-top: 40px;
+      }
+      .forgot-password-link {
+        display: flex;
+        justify-content: flex-end;
+
+        margin: 10px 0px 30px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ABB3C5;
+      }
+
+      .login-submit-button {
+        button {
+          width: 100%;
+          height: 50px;
+
+          font-weight: 500;
+          color: #2c406e;
+          background: #ffe18e;
+          /* opacity: 0.3; */
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .forgot-password-modal .inner {
+    position: relative; /*To adjust close button positioning*/
+
+    padding: 0 150px 30px;
+    .header {
+      position: static;  /*To adjust close button positioning*/
+
+      padding-bottom: 0;
+      padding-top: 0;
+      height: 55px;
+    }
+    .forgot-password-content {
+      .title {
+        color: var(--dark-text);
+      }
+      .subtitle {
+        margin-top: 40px;
+
+        color: var(--light-text);
+      }
+
+      .forgot-password-form {
+        display: flex;
+        flex-direction: column;
+        gap:25px;
+
+        margin-top: 25px;
+
+        .submit-action {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.set-password-form-box {
+  .register-button {
+    width: 100%;
+  }
+}
+
+.verify-email-success {
+  .green-tick {
+    display: flex;
+    justify-content: center;
+  }
+  .success-text {
+    margin-top: 40px;
+
+    color: #3ea02d;
+    font-size: 2.022em;
+    font-weight: 500;
+  }
+}

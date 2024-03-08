@@ -1,0 +1,46 @@
+#campaigns-view {
+  .page-content {
+    grid-area: content;
+
+    .campaigns-table {
+      td {
+        /* font-size: 16px; */
+      }
+
+      .campaign-leads-details {
+        position: relative;
+
+        .tooltip {
+          display: none;
+        }
+
+        &:hover {
+          .tooltip {
+            display: block;
+          }
+        }
+      }
+
+      .campaign-status-details {
+        .campaign-status {
+          margin-bottom: 5px;
+        }
+        .campaign-status-last-activity {
+          color: var(--table-light-text);
+        }
+      }
+    }
+  }
+  .save-cancel-button {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+  .campaign-details-modal {
+    .inner {
+      width: 50vw;
+    }
+  }
+}

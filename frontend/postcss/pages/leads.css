@@ -1,0 +1,162 @@
+#leads-view {
+  /* display: grid; */
+  /* grid-template-rows: 100px max-content; */
+  /* grid-template-areas: */
+  /*   '.' */
+  /*   'content' */
+  /* ; */
+  /* row-gap: 20px; */
+
+  .lead-details-modal {
+    .inner {
+      width: 75vw;
+    }
+  }
+
+  .save-cancel-button {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+
+  .page-content {
+    grid-area: content;
+
+    .leads-table {
+      td {
+        /* font-size: 16px; */
+      }
+
+      .lead-details {
+        .lead-name {
+          margin-bottom: 5px;
+
+          font-weight: 500;
+          line-height: 19px;
+        }
+        .lead-email {
+          font-weight: 500;
+          line-height: 17px;
+          color: var(--table-light-text);
+        }
+      }
+
+      .lead-role-linkedin {
+        .lead-role {
+          margin-bottom: 5px;
+
+          font-weight: 500;
+          line-height: 19px;
+        }
+        .lead-linkedin {
+          font-weight: 500;
+          line-height: 17px;
+          color: var(--table-light-text);
+          text-decoration: underline;
+        }
+      }
+
+      .company-details {
+        .company-name {
+          margin-bottom: 5px;
+
+          font-weight: 500;
+          line-height: 19px;
+        }
+        .company-website {
+          font-weight: 500;
+          line-height: 17px;
+          color: var(--table-light-text);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .steps-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 15px 0;
+
+      .left-content {
+        .steps{
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          align-items: center;
+        }
+        .step {
+          display: flex;
+          height: 70px;
+          padding: 10px 10px;
+          background-color: #f2f4f6;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          color: var(--title-color);
+        }
+        .step-active {
+          display: flex;
+          height: 70px;
+          padding: 10px 10px;
+          font-weight: 600;
+          color: var(--menu-active-color);
+          background-color: #ffffff;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+        }
+      }
+
+      .right-content {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 15px 0;
+      }
+    }
+  }
+
+  .lead-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    .promote-dump-lead {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .mark-lead {
+      border: 1px solid #ddd;
+    }
+  }
+  .apollo-form-inputs-wrapper {
+    width: 40vw;
+      margin-right: 40px;
+      margin-left: 40px;
+  }
+
+  .page-content {
+    .right-page-content {
+      .basic-details-primary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: var(--details-form-row-gap) var(--details-form-column-gap);
+      }
+
+      .lead-company-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: var(--details-form-row-gap) var(--details-form-column-gap);
+      }
+    }
+  }
+
+  .name-recommendations {
+    .name-recommendation {
+      text-decoration: underline;
+    }
+  }
+}
+
